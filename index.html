@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fullscreen Navigation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul id="fullscreen-navbar">
+        <li><a href="#home">home</a></li>
+        <li><a href="#contact">contact</a></li>
+        <li><a href="#gallery">gallery</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#about">about</a></li>
+      </ul>
+      <i id="nav-icon" class="fa-solid fa-bars" onclick="overlayNavbar()"></i>
+    </nav>
+
+    <script type="text/javascript">
+      function overlayNavbar() {
+        let navIcon = document.getElementById("nav-icon");
+        let fullScreenNavbar = document.getElementById("fullscreen-navbar");
+
+        if (navIcon.classList.contains("fa-bars")) {
+          navIcon.classList.remove("fa-bars");
+          navIcon.classList.add("fa-xmark");
+          fullScreenNavbar.style.left = "0";
+        } else {
+          navIcon.classList.remove("fa-xmark");
+          navIcon.classList.add("fa-bars");
+          fullScreenNavbar.style.left = "-100%";
+        }
+      }
+    </script>
+  </body>
+</html>
