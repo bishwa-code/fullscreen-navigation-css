@@ -1,2 +1,2 @@
 # fullscreen-navigation-css
-Fullscreen Overlay Navigation Bar using HTML CSS JavaScript
+**Fullscreen Overlay Navigation Bar using HTML CSS JavaScript**
